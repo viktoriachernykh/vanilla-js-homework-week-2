@@ -3,12 +3,12 @@ const darthVaderButton = document.getElementById('darthVaderButton')
 darthVaderButton.onclick = getDarth
 
 function getLuke() {
-fetch("https://swapi.co/api/people/1")
-  .then(response => response.json())
-  .then(parsedResponse => {
-    dataLukeSkywalker.innerHTML +=
-      "<pre>" + JSON.stringify(parsedResponse, null, " ") + "</pre>"
-  })
+  fetch("https://swapi.co/api/people/1")
+    .then(response => response.json())
+    .then(parsedResponse => {
+      dataLukeSkywalker.innerHTML +=
+        "<pre>" + JSON.stringify(parsedResponse, null, " ") + "</pre>"
+    })
 }
 
 getLuke()
@@ -19,6 +19,7 @@ function getDarth() {
     .then(parsedResponse => {
       dataLukeSkywalker.innerHTML =
         "<pre>" + JSON.stringify(parsedResponse, null, " ") + "</pre>"
-    })}
+    })
+}
   
 
